@@ -10,23 +10,13 @@ import orderRouter from "./routes/orderRoute.js";
 //app config
 const app = express();
 const port = 4000;
-const allowedOrigins = [
-  "https://food-delivery-wine-tau.vercel.app",
-  "https://food-delivery-admin-mauve.vercel.app",
-];
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (like curl or Postman)
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization", "token"],
+    origin: [
+      "https://food-delivery-admin-mauve.vercel.app",
+      "https://food-delivery-wine-tau.vercel.app",
+    ],
     credentials: true,
   })
 );
