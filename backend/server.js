@@ -21,7 +21,26 @@ app.use(
   })
 );
 
-// ✅ Handle preflight requests
+// Explicitly set CORS headers for all responses
+app.use((req, res, next) => {
+  const allowedOrigins = [
+    "https://food-delivery-admin-mauve.vercel.app",
+    "https://food-delivery-wine-tau.vercel.app",
+  ];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
+  }
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  next();
+});
+
+// Handle preflight requests for all routes
 app.options("*", cors());
 //middleware
 app.use(express.json());
