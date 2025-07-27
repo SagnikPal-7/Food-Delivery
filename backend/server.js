@@ -21,6 +21,9 @@ app.use(
   })
 );
 
+//cors
+app.options("*", cors());
+
 //db connection
 connectDB();
 
