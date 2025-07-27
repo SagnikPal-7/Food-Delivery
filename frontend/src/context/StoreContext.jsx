@@ -16,7 +16,7 @@ const StoreContextProvider = (props) => {
     }
   });
 
-  const url = "https://food-delivery-backend-hjz1.onrender.com";
+  const url = "https://food-delivery-dl16.onrender.com";
   const [token, setToken] = useState("");
   const [food_list, setFoodList] = useState([]);
 
