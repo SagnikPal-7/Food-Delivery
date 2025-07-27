@@ -19,7 +19,8 @@ app.use(
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://food-delivery-wine-tau.vercel.app"
+    "https://food-delivery-wine-tau.vercel.app",
+    "https://food-delivery-admin-mauve.vercel.app"
   );
   res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
