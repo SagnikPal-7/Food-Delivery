@@ -8,7 +8,12 @@ const StoreContextProvider = (props) => {
   // const [cartItems, setCartItems] = useState({});
   const [cartItems, setCartItems] = useState(() => {
     const saved = localStorage.getItem("cartItems");
-    return saved ? JSON.parse(saved) : {};
+    if (!saved || saved === "undefined") return {};
+    try {
+      return JSON.parse(saved);
+    } catch {
+      return {};
+    }
   });
 
   const url = "http://localhost:4000";
