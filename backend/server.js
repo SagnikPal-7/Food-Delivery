@@ -10,10 +10,6 @@ import orderRouter from "./routes/orderRoute.js";
 //app config
 const app = express();
 const port = 4000;
-
-//middleware
-app.use(express.json());
-
 app.use(
   cors({
     origin: "https://food-delivery-wine-tau.vercel.app", // your frontend URL
@@ -23,6 +19,8 @@ app.use(
 
 //cors
 app.options("*", cors());
+//middleware
+app.use(express.json());
 
 //db connection
 connectDB();
