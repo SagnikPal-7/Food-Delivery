@@ -2,14 +2,24 @@ import React, { useContext } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../context/StoreContext";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount, token } =
     useContext(StoreContext);
 
   const navigate = useNavigate();
-
   const delivery = 10;
+
+  const handleCheckout = () => {
+    if (!token) {
+      toast.error("Please sign in to proceed to checkout!");
+    } else {
+      navigate("/order");
+    }
+  };
+
   return (
     <div className="cart">
       <div className="cart-items">
@@ -74,7 +84,7 @@ const Cart = () => {
             </div>
           </div>
 
-          <button onClick={() => navigate("/order")}>
+          <button onClick={handleCheckout}>
             PROCEED TO CHECKOUT
           </button>
         </div>
