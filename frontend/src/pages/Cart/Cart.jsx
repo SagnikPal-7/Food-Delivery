@@ -84,9 +84,7 @@ const Cart = () => {
             </div>
           </div>
 
-          <button onClick={handleCheckout}>
-            PROCEED TO CHECKOUT
-          </button>
+          <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
         </div>
 
         <div className="cart-promocode">
