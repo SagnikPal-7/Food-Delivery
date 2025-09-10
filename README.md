@@ -2,7 +2,7 @@
 
 ## Architectural Diagram
 
-![Architectural Diagram](image.png)
+![Architectural Diagram](frontend/public/readme image.png)
 
 A full-stack food delivery application with user and admin panels, built using React (Vite), Node.js (Express), MongoDB Atlas, Stripe, and Cloudinary.
 
@@ -166,11 +166,11 @@ See the diagram above for details.
 
 ## Deployment
 
-- **Frontend:** Vercel  
-- **Admin Panel:** Vercel  
-- **Backend:** Render  
-- **Database:** MongoDB Atlas  
-- **Image Hosting:** Cloudinary  
+- **Frontend:** Vercel
+- **Admin Panel:** Vercel
+- **Backend:** Render
+- **Database:** MongoDB Atlas
+- **Image Hosting:** Cloudinary
 - **Payments:** Stripe
 
 ---
