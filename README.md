@@ -173,9 +173,3 @@ See the diagram above for details.
 - **Database:** MongoDB Atlas
 - **Image Hosting:** Cloudinary
 - **Payments:** Stripe
-
----
-
-## License
-
-MIT License. See `LICENSE` for details.
