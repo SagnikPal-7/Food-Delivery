@@ -1,12 +1,12 @@
 # Food Delivery App
 
+A full-stack food delivery application with user and admin panels, built using React (Vite), Node.js (Express), MongoDB Atlas, Stripe, and Cloudinary.
+
 ---
 
 ## Architecture Diagram
 
 ![Architecture Diagram](frontend/public/screenshot-for-readme.png)
-
-A full-stack food delivery application with user and admin panels, built using React (Vite), Node.js (Express), MongoDB Atlas, Stripe, and Cloudinary.
 
 ---
 
