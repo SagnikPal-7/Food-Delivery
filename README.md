@@ -2,7 +2,7 @@
 
 ## Architectural Diagram
 
-![Architectural Diagram](frontend/public/readme image.png)
+![Architecture Diagram](frontend/public/screenshot-for-readme.png)
 
 A full-stack food delivery application with user and admin panels, built using React (Vite), Node.js (Express), MongoDB Atlas, Stripe, and Cloudinary.
 
@@ -72,7 +72,6 @@ See the diagram above for details.
 │   ├── .env
 │   ├── package.json
 │   └── vite.config.js
-├── image.png
 └── README.md
 ```
 
